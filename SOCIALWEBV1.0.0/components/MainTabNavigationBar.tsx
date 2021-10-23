@@ -11,13 +11,18 @@ const MainTabNavigationBar = ({
   descriptors,
   navigation,
 }: BottomTabBarProps) => {
+  //generic navigation icon press handler that navigates to a specific screen depending on the
+  //icon pressed and currently active screen
   const tabIconPressHandler = useCallback((routeName: string) => {
+    //manually emitting the 'tabPress' navigation event that can be handled by the target screen
     const tabPressEvent = navigation.emit({
       type: "tabPress",
       target: routeName,
       canPreventDefault: true,
     });
 
+    //if the current screen is not the target screen and the default behavior of the 'tabPress' event is not
+    //prevented then navigate to the target screen
     if (
       routeName !== state.routeNames[state.index] &&
       !tabPressEvent.defaultPrevented
@@ -26,6 +31,7 @@ const MainTabNavigationBar = ({
     }
   }, []);
 
+  //iterate through all the route names and render the appropriate navigation icons for each routeName
   return (
     <>
       {state.routes.map((item, index) => {

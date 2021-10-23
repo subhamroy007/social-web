@@ -8,6 +8,7 @@ const GenericTabBarIcon = ({
   routeName,
 }: GenericTabBarIconProps) => {
   const pressHandler = useCallback((event: GestureResponderEvent) => {
+    console.log("icon pressed");
     onPress(routeName);
   }, []);
 

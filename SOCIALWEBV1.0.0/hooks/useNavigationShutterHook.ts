@@ -29,10 +29,10 @@ const useNavigationShutterHook = (): NavigationShutterHook => {
 
   const shutterPanResponder = useRef<PanResponderInstance>(
     PanResponder.create({
-      onStartShouldSetPanResponder: (e, gestureState) => true,
-      onStartShouldSetPanResponderCapture: (e, gestureState) => true,
+      onStartShouldSetPanResponder: (e, gestureState) => false,
+      onStartShouldSetPanResponderCapture: (e, gestureState) => false,
       onMoveShouldSetPanResponder: (e, gestureState) => true,
-      onMoveShouldSetPanResponderCapture: (e, gestureState) => true,
+      onMoveShouldSetPanResponderCapture: (e, gestureState) => false,
       onPanResponderGrant: (e, gestureState) => {
         animationControlData.setOffset(shutterPositionOffset.current);
         setVisible(true);
