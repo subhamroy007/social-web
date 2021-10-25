@@ -1,9 +1,6 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs/lib/typescript/src/types";
 import React, { useCallback } from "react";
-import { StyleSheet, Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { Feather, AntDesign, FontAwesome5, Ionicons } from "@expo/vector-icons";
-import { globalColors } from "../utility/style/colors";
 import GenericTabBarIcon from "./GenericTabBarIcon";
 
 const MainTabNavigationBar = ({

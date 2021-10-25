@@ -22,4 +22,22 @@ export const globalColors = StyleSheet.create({
   shutterOverlayColor: {
     backgroundColor: "black",
   },
+  avatarColor: {
+    backgroundColor: "#FDFDFD",
+  },
+  avatarContainerColor: {
+    borderColor: "#787373",
+  },
+  userInfoContainerColor: {
+    backgroundColor: "#FDFDFD",
+  },
+  userInfoPrimaryTextColor: {
+    color: "#1D1B1B",
+  },
+  userInfoSecondaryTextColor: {
+    color: "#1D1B1B",
+  },
+  imageFeedPostHeaderContainerColor: {
+    backgroundColor: "#FDFDFD",
+  },
 });
