@@ -1,64 +1,46 @@
-import React, { useState } from 'react'
-import { Text, ScrollView, Pressable, TouchableOpacity } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context';
+import React from 'react'
+import { Text, SafeAreaView, TouchableOpacity, Pressable } from 'react-native'
 
-const keywords = [
-    '#All',
-    '#React js',
-    '#Angular js',
-    '#React Native',
-    '#subrata',
-    '#kolay'
-]
-
-const Hash = () => {
-    // const [activeElement, setActiveElement] = useState('All');
-
-
+const name = "subrata";
+const onpress = () => {
+    return
+}
+const HashContainer = () => {
     return (
         <SafeAreaView style={{
+            height: 30,
+            marginTop: 30,
+            marginLeft: 10,
+            backgroundColor: 'red',
+            borderRadius: 15,
+            alignSelf: 'flex-start'
+
         }} >
-            <ScrollView
-                horizontal={true}
-                style={{
-                    paddingTop: 10,
-                    marginTop: 20,
-                    marginBottom: 40,
-                    backgroundColor: 'red',
-                    height: 60
+            <TouchableOpacity onPress={onpress}>
 
-                }}>
+                <Text
+                    //onPress={() => hashPage()}
+                    style={{
+                        borderColor: 'black',
+                        padding: 4,
+                        paddingLeft: 10,
+                        paddingRight: 10,
+                        borderWidth: 1,
+                        borderRadius: 15,
+                        backgroundColor: 'lightblue',
+                        textAlign: 'center',
+                        height: 30,
+                        alignSelf: 'flex-start'
 
-                {keywords.map((value, id) => (
-                    <TouchableOpacity key={id}>
+                    }}
+                >
+                    {name}
+                </Text>
+            </TouchableOpacity >
 
-                        <Text key={id}
 
-                            //  onPress={() => hashPage()}
-
-                            style={{
-                                borderColor: 'black',
-                                padding: 5,
-                                paddingLeft: 10,
-                                borderWidth: 1,
-                                borderRadius: 15,
-                                backgroundColor: 'lightblue',
-                                margin: 2,
-                                textAlign: 'center',
-                                height: 40
-
-                            }}
-                        >
-                            {value}
-                        </Text>
-                    </TouchableOpacity>
-
-                ))}
-            </ScrollView>
         </SafeAreaView >
 
     )
 }
-
-export default Hash;
-
+export default HashContainer
