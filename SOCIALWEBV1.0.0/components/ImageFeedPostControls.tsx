@@ -1,8 +1,9 @@
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Icon from "./Icon";
+import Icon, { IconProps } from "./Icon";
 import { AntDesign, EvilIcons, Ionicons, Feather } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";
+import { CustomIcon } from "../utility/ui/appIcon";
 
 const ImageFeedPostControls = () => {
   return (
@@ -15,36 +16,48 @@ const ImageFeedPostControls = () => {
         edges={[]}
       >
         <Icon onPress={() => {}}>
-          <AntDesign
-            name="hearto"
-            size={24}
-            color="black"
-            style={{ marginLeft: 10 }}
-          />
+          {(iconDefaultProps) => (
+            <CustomIcon
+              name="heart-outline"
+              size={24}
+              color="black"
+              style={{ marginLeft: 10 }}
+              {...iconDefaultProps}
+            />
+          )}
         </Icon>
         <Icon onPress={() => {}}>
-          <EvilIcons
-            name="comment"
-            size={34}
-            color="black"
-            adjustsFontSizeToFit={true}
-            allowFontScaling={true}
-            maxFontSizeMultiplier={2.0}
-            minimumFontScale={0.5}
-            style={{ marginLeft: 24 }}
-          />
+          {(iconDefaultProps) => (
+            <CustomIcon
+              name="comment-outline"
+              size={48}
+              color="black"
+              style={{ marginLeft: 24 }}
+              {...iconDefaultProps}
+            />
+          )}
         </Icon>
         <Icon onPress={() => {}}>
-          <Ionicons
-            name="share-outline"
-            size={28}
-            color="black"
-            style={{ marginLeft: 24 }}
-          />
+          {(iconDefaultProps) => (
+            <CustomIcon
+              name="send"
+              size={24}
+              color="black"
+              style={{ marginLeft: 24 }}
+              {...iconDefaultProps}
+            />
+          )}
         </Icon>
       </SafeAreaView>
       <Icon onPress={() => {}}>
-        <Feather name="bookmark" size={28} color="black" />
+        {(iconDefaultProps) => (
+          <CustomIcon
+            name="bookmark-outline"
+            size={24}
+            color="black"
+            {...iconDefaultProps}
+          />
+        )}
       </Icon>
     </SafeAreaView>
   );

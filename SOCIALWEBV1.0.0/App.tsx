@@ -18,6 +18,8 @@ import {
   EvilIcons,
 } from "@expo/vector-icons";
 import * as SplashScreen from "expo-splash-screen";
+import { Provider } from "react-redux";
+import appStore from "./store/appStore";
 
 enableScreens(true);
 
@@ -52,22 +54,14 @@ const App = () => {
           "roboto-regular": require("./assets/fonts/Roboto-Regular.ttf"),
           "roboto-thin": require("./assets/fonts/Roboto-Thin.ttf"),
           "roboto-thin-italic": require("./assets/fonts/Roboto-ThinItalic.ttf"),
+          icons: require("./assets/fonts/icons.ttf"),
         };
 
         //enable the splash screen to render while assets are loading
         await SplashScreen.preventAutoHideAsync();
 
         //calling the function that loads the fonts asin
-        await Promise.all(
-          loadFontsAsync([
-            Feather.font,
-            AntDesign.font,
-            Ionicons.font,
-            FontAwesome.font,
-            EvilIcons.font,
-            appTextFonts,
-          ])
-        );
+        await Promise.all(loadFontsAsync([appTextFonts]));
       } catch (error) {
         console.warn("something went wrong while loading the app assest");
         console.warn(error);
@@ -93,26 +87,31 @@ const App = () => {
   }
 
   return (
-    <NavigationContainer onReady={appReadyCallback}>
-      <MainTabNavigation.Navigator
-        tabBar={(props) => <ShutterComponent {...props} />}
-      >
-        <MainTabNavigation.Screen
-          name="ImageFeed"
-          component={ImageFeedScreen}
-        />
-        <MainTabNavigation.Screen
-          name="SearchResult"
-          component={SearchResultScreen}
-        />
-        <MainTabNavigation.Screen name="Profile" component={ProfileScreen} />
-        <MainTabNavigation.Screen name="Trending" component={TrendingScreen} />
-        <MainTabNavigation.Screen
-          name="Notification"
-          component={NotificationScreen}
-        />
-      </MainTabNavigation.Navigator>
-    </NavigationContainer>
+    <Provider store={appStore}>
+      <NavigationContainer onReady={appReadyCallback}>
+        <MainTabNavigation.Navigator
+          tabBar={(props) => <ShutterComponent {...props} />}
+        >
+          <MainTabNavigation.Screen
+            name="ImageFeed"
+            component={ImageFeedScreen}
+          />
+          <MainTabNavigation.Screen
+            name="SearchResult"
+            component={SearchResultScreen}
+          />
+          <MainTabNavigation.Screen name="Profile" component={ProfileScreen} />
+          <MainTabNavigation.Screen
+            name="Trending"
+            component={TrendingScreen}
+          />
+          <MainTabNavigation.Screen
+            name="Notification"
+            component={NotificationScreen}
+          />
+        </MainTabNavigation.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 };
 

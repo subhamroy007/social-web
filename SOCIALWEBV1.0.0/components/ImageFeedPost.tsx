@@ -4,8 +4,12 @@ import ImageFeedPostHeader from "../components/ImageFeedPostHeader";
 import ImageFeedPostControls from "../components/ImageFeedPostControls";
 import ImageFeedSinglePost from "../components/ImageFeedSinglePost";
 import { StyleSheet } from "react-native";
+import CollapsibleText from "./CollapsibleText";
 
-const ImageFeedPost = () => {
+const ImageFeedPost = (props: { id: string }) => {
+  const height = Math.floor(Math.random() * 400) + 200;
+  const width = Math.floor(Math.random() * 400) + 200;
+
   return (
     <SafeAreaView
       edges={["left", "right"]}
@@ -13,11 +17,17 @@ const ImageFeedPost = () => {
     >
       <ImageFeedPostHeader />
       <ImageFeedSinglePost
-        url="https://cdn.vox-cdn.com/thumbor/Fkp_wL_RY7DO3sQ8Vk8WmU9Ouz8=/0x0:3840x2560/1400x1400/filters:focal(2491x490:3105x1104):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55644669/spider_man_homecoming_tony_peter_3840.0.jpg"
-        height={1400}
-        width={1400}
+        url={`https://source.unsplash.com/random/${width}x${height}`}
+        height={height}
+        width={width}
       />
       <ImageFeedPostControls />
+      <CollapsibleText
+        content="hello this is a demo capton to chek the visibility of captions 
+        in full screen mode of the image post and it is quite allright
+        this is the best app on the group of social media
+        and i am new here but already amused with this app :)"
+      />
     </SafeAreaView>
   );
 };

@@ -1,22 +1,25 @@
 import React, { ReactNode } from "react";
-import {
-  Pressable,
-  PressableAndroidRippleConfig,
-  StyleProp,
-  TextStyle,
-} from "react-native";
+import { StyleSheet, TextProps } from "react-native";
 
 export interface IconProps {
-  children: ReactNode;
+  children: (iconDefaultProps: TextProps) => ReactNode;
   onPress: () => void;
 }
 
 const Icon = (props: IconProps) => {
-  return (
-    <Pressable onPress={props.onPress} android_disableSound={true}>
-      {props.children}
-    </Pressable>
-  );
+  const iconDefaultProps: TextProps = {
+    adjustsFontSizeToFit: true,
+    allowFontScaling: true,
+    maxFontSizeMultiplier: 2.0,
+    minimumFontScale: 0.5,
+    onPress: props.onPress,
+  };
+
+  return <>{props.children(iconDefaultProps)}</>;
 };
+
+const styles = StyleSheet.create({
+  iconDefaultProps: {},
+});
 
 export default Icon;

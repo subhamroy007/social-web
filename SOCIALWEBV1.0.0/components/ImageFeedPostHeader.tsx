@@ -5,6 +5,7 @@ import UserInfo from "./UserInfo";
 import { Feather } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";
 import { globalColors } from "../utility/style/colors";
+import { CustomIcon } from "../utility/ui/appIcon";
 
 const ImageFeedPostHeader = () => {
   return (
@@ -21,7 +22,14 @@ const ImageFeedPostHeader = () => {
         secondaryText="30m"
       />
       <Icon onPress={() => console.log("pressed")}>
-        <Feather name="more-vertical" size={24} color="black" />
+        {(iconDefaultProps) => (
+          <CustomIcon
+            name="more-option"
+            size={24}
+            color="black"
+            {...iconDefaultProps}
+          />
+        )}
       </Icon>
     </SafeAreaView>
   );

@@ -2,8 +2,11 @@ import React, { useCallback, useState } from "react";
 import {
   Image,
   ImageSourcePropType,
+  StyleProp,
   StyleSheet,
   TouchableWithoutFeedback,
+  ViewProps,
+  ViewStyle,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { globalColors } from "../utility/style/colors";
@@ -11,6 +14,7 @@ import { globalColors } from "../utility/style/colors";
 export interface AvatarProps {
   size: number;
   url: string;
+  style?: StyleProp<ViewStyle>;
 }
 
 const Avatar = (props: AvatarProps) => {
@@ -42,6 +46,7 @@ const Avatar = (props: AvatarProps) => {
             borderRadius: Math.floor(props.size / 2),
           },
           styles.avatarContainer,
+          props.style,
         ]}
       >
         <Image
