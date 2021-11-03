@@ -2,7 +2,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { globalColors } from "../utility/style/colors";
 import { globalLayouts } from "../utility/style/layout";
 import React, { useEffect } from "react";
-import { FlatList, ListRenderItemInfo, StyleSheet } from "react-native";
+import { FlatList, Image, ListRenderItemInfo, StyleSheet } from "react-native";
 import StoryFeed from "../components/StoryFeed";
 import ImageFeedItemSeperatorComponent from "../components/ImageFeedItemSeperator";
 import { useAppDispatch, useAppSelector } from "../store/appStore";
@@ -15,8 +15,6 @@ import {
   getImageFeedThunk,
   ImageFeedRequest,
 } from "../store/imagePostSlice/imagePostReducer";
-import Icon from "../components/Icon";
-import { CustomIcon } from "../utility/ui/appIcon";
 
 const renderItem = (item: ListRenderItemInfo<string>) => {
   return <ImageFeedPost id={item.item} />;
@@ -69,6 +67,7 @@ const ImageFeedScreen = () => {
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={ImageFeedItemSeperatorComponent}
         initialNumToRender={5}
+        ListEmptyComponent={<ImageFeedPost id="67" />}
       />
     </SafeAreaView>
   );
