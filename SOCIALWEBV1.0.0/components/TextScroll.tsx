@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TextScrollProps } from "../utility/types/other_types";
 const TextScroll = ({ children }: TextScrollProps) => {
-    // This is a wrapper component the wraps
+    // This is a wrapper component.
     return (
         <SafeAreaView style={styles.scroller}>
             <ScrollView>{children}</ScrollView>
