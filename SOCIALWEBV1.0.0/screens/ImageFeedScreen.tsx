@@ -5,8 +5,9 @@ import React from "react";
 import { Text } from "react-native";
 
 const ImageFeedScreen = () => {
-    const text: string =
-        "Lorem  ipsum \n dolor sit, amet consectetur adipisicing elit. Sed quidem \n voluptatum quo, at impedit, repudiandae enim fuga, sunt praesentium dignissimos ratione nemo consequatur! Cum repudiandae voluptate officiis quam atque voluptatem!";
+    const searchHandler = (text: string) => {
+        console.log(text);
+    };
     return (
         <SafeAreaView
             style={[globalLayouts.screenLayout, globalColors.screenColor]}

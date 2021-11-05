@@ -19,3 +19,9 @@ export interface CollapseTextProps {
 export interface TextScrollProps {
     children: React.ReactNode;
 }
+
+export interface ResourceContainnerProps {
+    iconName: string;
+    title: string;
+    url: string;
+}
