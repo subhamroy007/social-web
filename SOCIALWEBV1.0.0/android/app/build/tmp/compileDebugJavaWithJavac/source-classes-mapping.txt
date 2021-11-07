@@ -1,15 +1,15 @@
-org/socialweb/MainApplication.java
- org.socialweb.MainApplication
- org.socialweb.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
 org/socialweb/BuildConfig.java
  org.socialweb.BuildConfig
 org/socialweb/generated/BasePackageList.java
  org.socialweb.generated.BasePackageList
+org/socialweb/MainApplication.java
+ org.socialweb.MainApplication
+ org.socialweb.MainApplication$1
 org/socialweb/MainActivity.java
  org.socialweb.MainActivity
  org.socialweb.MainActivity$1
-com/facebook/react/PackageList.java
- com.facebook.react.PackageList
 org/socialweb/ReactNativeFlipper.java
  org.socialweb.ReactNativeFlipper
  org.socialweb.ReactNativeFlipper$1
