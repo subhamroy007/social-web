@@ -11,3 +11,17 @@ export interface NavigationShutterHook {
   isOverlayVisible: boolean;
   shutterPanResponder: PanResponderInstance;
 }
+
+export interface CollapseTextProps {
+    content: string;
+}
+
+export interface TextScrollProps {
+    children: React.ReactNode;
+}
+
+export interface ResourceContainnerProps {
+    iconName: string;
+    title: string;
+    url: string;
+}
