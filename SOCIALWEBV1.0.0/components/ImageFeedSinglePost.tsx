@@ -1,14 +1,22 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
+import { Dimensions, StyleProp, StyleSheet } from "react-native";
+import FastImage, {
+  ImageStyle,
+  ResizeMode,
+  Source,
+} from "react-native-fast-image";
 import {
-  Dimensions,
-  Image,
-  ImageSourcePropType,
-  PanResponder,
-  PanResponderInstance,
-  StyleSheet,
-  useWindowDimensions,
-} from "react-native";
+  GestureHandlerRootView,
+  HandlerStateChangeEvent,
+  State,
+  TapGestureHandler,
+  TapGestureHandlerEventPayload,
+} from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  IMAGE_POST_MAX_HEIGHT,
+  IMAGE_POST_MIN_HEIGHT,
+} from "../utility/constants/appConstants";
 import ImageFeedPostOverlay from "./ImageFeedPostOverlay";
 
 export interface ImageFeedSinglePostProps {
@@ -17,30 +25,94 @@ export interface ImageFeedSinglePostProps {
   height: number;
 }
 
-const ImageFeedSinglePost = (props: ImageFeedSinglePostProps) => {
-  const [isPressed, setPressed] = useState(false);
+export interface ImagePostResolutionHookArg {
+  imageResizeMode: ResizeMode;
+  imageResolution: StyleProp<ImageStyle>;
+  scaledWidth: number;
+  scaledHeight: number;
+}
 
-  const { width: scaledWidth } = useWindowDimensions();
+const ImageFeedSinglePost = ({
+  url,
+  height,
+  width,
+}: ImageFeedSinglePostProps) => {
+  const [isOverlayVisible, setOverlayVisible] = useState<boolean>(false);
 
-  const scaledHeight = Math.floor((props.height * scaledWidth) / props.width);
+  const imageSource: Source = useMemo(
+    () => ({ cache: "immutable", priority: "high", uri: url }),
+    [url]
+  );
 
-  // const imageSource: Source = useMemo(
-  //   () => ({
-  //     uri: props.url,
-  //     cache: "immutable",
-  //     priority: "high",
-  //   }),
-  //   [props.url]
-  // );
+  const { imageResizeMode, imageResolution, scaledHeight, scaledWidth } =
+    useMemo<ImagePostResolutionHookArg>(() => {
+      let imageScaledWidth = Dimensions.get("window").width;
+      let imageScaledHeight = (height * imageScaledWidth) / width;
+      let imageResizeMode: ResizeMode = "center";
+
+      if (width < imageScaledWidth && height < imageScaledHeight) {
+        imageResizeMode = "center";
+      } else {
+        imageResizeMode = "cover";
+      }
+
+      if (imageScaledHeight < IMAGE_POST_MIN_HEIGHT) {
+        imageScaledHeight = IMAGE_POST_MIN_HEIGHT;
+      } else if (imageScaledHeight > IMAGE_POST_MAX_HEIGHT) {
+        imageScaledHeight = IMAGE_POST_MAX_HEIGHT;
+      }
+
+      const imageResolution: StyleProp<ImageStyle> = {
+        width: imageScaledWidth,
+        height: imageScaledHeight,
+      };
+      return {
+        imageResizeMode,
+        imageResolution,
+        scaledWidth: imageScaledWidth,
+        scaledHeight: imageScaledHeight,
+      };
+    }, [width, height]);
+
+  const singleTapHandler = useCallback(
+    ({
+      nativeEvent,
+    }: HandlerStateChangeEvent<TapGestureHandlerEventPayload>) => {
+      if (nativeEvent.state === State.ACTIVE) {
+        setOverlayVisible((state) => !state);
+      }
+    },
+    []
+  );
 
   return (
     <SafeAreaView
       edges={["left", "right"]}
       style={[styles.imageFeedSinglePostContainer]}
     >
-      {isPressed && (
-        <ImageFeedPostOverlay width={scaledWidth} height={scaledHeight} />
-      )}
+      <GestureHandlerRootView>
+        <TapGestureHandler
+          minPointers={1}
+          maxDurationMs={600}
+          maxDelayMs={600}
+          numberOfTaps={1}
+          maxDeltaX={width}
+          maxDeltaY={height}
+          shouldCancelWhenOutside={true}
+          onHandlerStateChange={singleTapHandler}
+        >
+          <SafeAreaView edges={[]}>
+            <FastImage
+              source={imageSource}
+              resizeMode={imageResizeMode}
+              style={[imageResolution, styles.imageStyle]}
+            />
+            {isOverlayVisible && (
+              <ImageFeedPostOverlay height={scaledHeight} width={scaledWidth} />
+            )}
+          </SafeAreaView>
+        </TapGestureHandler>
+      </GestureHandlerRootView>
     </SafeAreaView>
   );
 };
@@ -54,56 +126,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   imageStyle: {
-    width: Dimensions.get("window").width,
-    height: 300,
+    backgroundColor: "red",
   },
 });
 
 export default ImageFeedSinglePost;
-
-//  const imagePostPanResponder = useRef<PanResponderInstance>(
-//    PanResponder.create({
-//      // Ask to be the responder:
-//      onStartShouldSetPanResponder: (evt, gestureState) => {
-//        console.log("image responder set");
-//        return true;
-//      },
-//      onStartShouldSetPanResponderCapture: (evt, gestureState) => {
-//        console.log("image responder set with parent");
-//        return false;
-//      },
-//      onMoveShouldSetPanResponder: (evt, gestureState) => false,
-//      onMoveShouldSetPanResponderCapture: (evt, gestureState) => false,
-
-//      onPanResponderGrant: (evt, gestureState) => {
-//        // The gesture has started. Show visual feedback so the user knows
-//        // what is happening!
-//        // gestureState.d{x,y} will be set to zero now
-//      },
-//      onPanResponderMove: (evt, gestureState) => {
-//        // The most recent move distance is gestureState.move{X,Y}
-//        // The accumulated gesture distance since becoming responder is
-//        // gestureState.d{x,y}
-//        setMoving(true);
-//        console.log("moving");
-//      },
-//      onPanResponderTerminationRequest: (evt, gestureState) => isMoving,
-//      onPanResponderRelease: (evt, gestureState) => {
-//        // The user has released all touches while this view is the
-//        // responder. This typically means a gesture has succeeded
-//        if (gestureState.dx === 0 && gestureState.dy === 0) {
-//          setPressed((state) => !state);
-//        }
-//      },
-//      onPanResponderTerminate: (evt, gestureState) => {
-//        // Another component has become the responder, so this gesture
-//        // should be cancelled
-//        console.log("responder cancelled");
-//      },
-//      onShouldBlockNativeResponder: (evt, gestureState) => {
-//        // Returns whether this component should block native components from becoming the JS
-//        // responder. Returns true by default. Is currently only supported on android.
-//        return true;
-//      },
-//    })
-//  ).current;

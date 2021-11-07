@@ -1,0 +1,248 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.socialweb"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:4:3-75
+11-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:4:20-73
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:2:3-64
+12-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:3:3-77
+13-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:3:20-75
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:5:3-63
+14-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:5:20-61
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:6:3-78
+15-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:6:20-76
+16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+16-->[com.facebook.flipper:flipper:0.54.0] C:\Users\subha\.gradle\caches\transforms-3\7ced98fae9ea2b5aa64e54aefef0d400\transformed\jetified-flipper-0.54.0\AndroidManifest.xml:16:5-76
+16-->[com.facebook.flipper:flipper:0.54.0] C:\Users\subha\.gradle\caches\transforms-3\7ced98fae9ea2b5aa64e54aefef0d400\transformed\jetified-flipper-0.54.0\AndroidManifest.xml:16:22-73
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[:expo-updates] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-updates\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-79
+17-->[:expo-updates] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-updates\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-76
+18
+19    <queries>
+19-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-13:15
+20        <package android:name="host.exp.exponent" />
+20-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-53
+20-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:18-50
+21        <!-- Query open documents -->
+22        <intent>
+22-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:9-21:18
+23            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+23-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-79
+23-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:21-76
+24        </intent>
+25    </queries>
+26
+27    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+27-->[com.android.installreferrer:installreferrer:1.0] C:\Users\subha\.gradle\caches\transforms-3\1fec9c23f2138aa21182cc087adbb5bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+27-->[com.android.installreferrer:installreferrer:1.0] C:\Users\subha\.gradle\caches\transforms-3\1fec9c23f2138aa21182cc087adbb5bc\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+28
+29    <application
+29-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:7:3-27:17
+30        android:name="org.socialweb.MainApplication"
+30-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:7:16-47
+31        android:allowBackup="true"
+31-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:7:162-188
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.3.0] C:\Users\subha\.gradle\caches\transforms-3\fe3cf0882eb40046447bd9893532f7c5\transformed\core-1.3.0\AndroidManifest.xml:24:18-86
+33        android:debuggable="true"
+34        android:icon="@mipmap/ic_launcher"
+34-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:7:81-115
+35        android:label="@string/app_name"
+35-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:7:48-80
+36        android:roundIcon="@mipmap/ic_launcher_round"
+36-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:7:116-161
+37        android:theme="@style/AppTheme"
+37-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:7:189-220
+38        android:usesCleartextTraffic="true" >
+38-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:7:221-256
+39        <meta-data
+39-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:8:5-82
+40            android:name="expo.modules.updates.ENABLED"
+40-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:8:16-59
+41            android:value="true" />
+41-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:8:60-80
+42        <meta-data
+42-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:9:5-93
+43            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+43-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:9:16-68
+44            android:value="42.0.0" />
+44-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:9:69-91
+45        <meta-data
+45-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:10:5-105
+46            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+46-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:10:16-80
+47            android:value="ALWAYS" />
+47-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:10:81-103
+48        <meta-data
+48-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:11:5-99
+49            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+49-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:11:16-79
+50            android:value="0" />
+50-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:11:80-97
+51        <meta-data
+51-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:12:5-123
+52            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+52-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:12:16-67
+53            android:value="https://exp.host/@anonymous/SOCIALWEB" />
+53-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:12:68-121
+54
+55        <activity
+55-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:13:5-25:16
+56            android:name="org.socialweb.MainActivity"
+56-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:13:15-43
+57            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+57-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:13:77-154
+58            android:label="@string/app_name"
+58-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:13:44-76
+59            android:launchMode="singleTask"
+59-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:13:155-186
+60            android:screenOrientation="portrait"
+60-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:13:276-312
+61            android:theme="@style/Theme.App.SplashScreen"
+61-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:13:230-275
+62            android:windowSoftInputMode="adjustResize" >
+62-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:13:187-229
+63            <intent-filter>
+63-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:14:7-17:23
+64                <action android:name="android.intent.action.MAIN" />
+64-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:15:9-60
+64-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:15:17-58
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:16:9-68
+66-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:16:19-66
+67            </intent-filter>
+68            <intent-filter>
+68-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:18:7-24:23
+69                <action android:name="android.intent.action.VIEW" />
+69-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:19:9-60
+69-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:19:17-58
+70
+71                <category android:name="android.intent.category.DEFAULT" />
+71-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:20:9-67
+71-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:20:19-65
+72                <category android:name="android.intent.category.BROWSABLE" />
+72-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:21:9-69
+72-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:21:19-67
+73
+74                <data android:scheme="org.socialweb" />
+74-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:22:9-47
+74-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:22:15-45
+75                <data android:scheme="exp+socialweb" />
+75-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:22:9-47
+75-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:22:15-45
+76            </intent-filter>
+77        </activity>
+78        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+78-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:26:5-81
+78-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:26:15-79
+79
+80        <meta-data
+80-->[:unimodules-react-native-adapter] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-14:91
+81            android:name="org.unimodules.core.AppLoader#react-native-headless"
+81-->[:unimodules-react-native-adapter] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-79
+82            android:value="org.unimodules.adapters.react.apploader.RNHeadlessAppLoader" />
+82-->[:unimodules-react-native-adapter] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-88
+83
+84        <activity
+84-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-20:73
+85            android:name="expo.modules.devlauncher.launcher.DevLauncherActivity"
+85-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-81
+86            android:launchMode="singleTask"
+86-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-44
+87            android:screenOrientation="portrait"
+87-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-49
+88            android:theme="@style/Theme.DevLauncher.LauncherActivity" />
+88-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-70
+89        <activity
+89-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:9-24:70
+90            android:name="expo.modules.devlauncher.launcher.errors.DevLauncherErrorActivity"
+90-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-93
+91            android:screenOrientation="portrait"
+91-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-49
+92            android:theme="@style/Theme.DevLauncher.ErrorActivity" />
+92-->[:expo-dev-launcher] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-67
+93        <activity
+93-->[:expo-dev-menu] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-24:20
+94            android:name="expo.modules.devmenu.DevMenuActivity"
+94-->[:expo-dev-menu] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-64
+95            android:launchMode="singleTask"
+95-->[:expo-dev-menu] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-44
+96            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" >
+96-->[:expo-dev-menu] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-75
+97            <intent-filter>
+97-->[:expo-dev-menu] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-23:29
+98                <action android:name="android.intent.action.VIEW" />
+98-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:19:9-60
+98-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:19:17-58
+99
+100                <category android:name="android.intent.category.DEFAULT" />
+100-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:20:9-67
+100-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:20:19-65
+101                <category android:name="android.intent.category.BROWSABLE" />
+101-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:21:9-69
+101-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:21:19-67
+102
+103                <data android:scheme="expo-dev-menu" />
+103-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:22:9-47
+103-->C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\android\app\src\main\AndroidManifest.xml:22:15-45
+104            </intent-filter>
+105        </activity>
+106
+107        <provider
+107-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-34:20
+108            android:name="expo.modules.filesystem.FileSystemFileProvider"
+108-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-74
+109            android:authorities="org.socialweb.FileSystemFileProvider"
+109-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-74
+110            android:exported="false"
+110-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-37
+111            android:grantUriPermissions="true" >
+111-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-47
+112            <meta-data
+112-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-33:70
+113                android:name="android.support.FILE_PROVIDER_PATHS"
+113-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:17-67
+114                android:resource="@xml/file_system_provider_paths" />
+114-->[:expo-file-system] C:\Users\subha\OneDrive\Desktop\projects\social-web\SOCIALWEBV1.0.0\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:17-67
+115        </provider>
+116
+117        <meta-data
+117-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] C:\Users\subha\.gradle\caches\transforms-3\b5b1baf0c2d2570f6f9d4981d421083f\transformed\jetified-okhttp3-integration-4.12.0\AndroidManifest.xml:11:9-13:43
+118            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+118-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] C:\Users\subha\.gradle\caches\transforms-3\b5b1baf0c2d2570f6f9d4981d421083f\transformed\jetified-okhttp3-integration-4.12.0\AndroidManifest.xml:12:13-84
+119            android:value="GlideModule" />
+119-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] C:\Users\subha\.gradle\caches\transforms-3\b5b1baf0c2d2570f6f9d4981d421083f\transformed\jetified-okhttp3-integration-4.12.0\AndroidManifest.xml:13:13-40
+120
+121        <service
+121-->[androidx.room:room-runtime:2.1.0] C:\Users\subha\.gradle\caches\transforms-3\3b5db4b3b22ae452a34a6490900f58b2\transformed\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
+122            android:name="androidx.room.MultiInstanceInvalidationService"
+122-->[androidx.room:room-runtime:2.1.0] C:\Users\subha\.gradle\caches\transforms-3\3b5db4b3b22ae452a34a6490900f58b2\transformed\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
+123            android:exported="false" />
+123-->[androidx.room:room-runtime:2.1.0] C:\Users\subha\.gradle\caches\transforms-3\3b5db4b3b22ae452a34a6490900f58b2\transformed\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
+124
+125        <provider
+125-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\subha\.gradle\caches\transforms-3\7d3ec334880df430744e2b1f6a24d7db\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+126            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+126-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\subha\.gradle\caches\transforms-3\7d3ec334880df430744e2b1f6a24d7db\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+127            android:authorities="org.socialweb.lifecycle-process"
+127-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\subha\.gradle\caches\transforms-3\7d3ec334880df430744e2b1f6a24d7db\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+128            android:exported="false"
+128-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\subha\.gradle\caches\transforms-3\7d3ec334880df430744e2b1f6a24d7db\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+129            android:multiprocess="true" />
+129-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\subha\.gradle\caches\transforms-3\7d3ec334880df430744e2b1f6a24d7db\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+130    </application>
+131
+132</manifest>

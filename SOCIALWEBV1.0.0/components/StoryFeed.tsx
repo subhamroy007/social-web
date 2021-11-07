@@ -6,18 +6,16 @@ import Avatar from "./Avatar";
 const dummyData = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] as number[];
 
 const renderFunc = (item: ListRenderItemInfo<number>) => {
-  console.log("function called for story avatar");
   return (
     <Avatar
-      size={64}
-      url="https://source.unsplash.com/random/64x64"
+      size={48}
+      url="https://source.unsplash.com/random/120x120"
       style={{ marginHorizontal: 5 }}
     />
   );
 };
 
 const StoryFeed = () => {
-  console.log("rendering story feed");
   return (
     <SafeAreaView style={styles.storyFeedContainer} edges={[]}>
       <FlatList
@@ -44,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#FDFDFD",
     width: "100%",
-    height: 74,
+    height: 67,
   },
   storyFeedList: {
     flex: 1,

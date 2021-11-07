@@ -21,16 +21,7 @@ const ImageFeedPostHeader = () => {
         primaryText="roybond007"
         secondaryText="30m"
       />
-      <Icon onPress={() => console.log("pressed")}>
-        {(iconDefaultProps) => (
-          <CustomIcon
-            name="more-option"
-            size={24}
-            color="black"
-            {...iconDefaultProps}
-          />
-        )}
-      </Icon>
+      <Icon color="black" name="more-option" size={24} />
     </SafeAreaView>
   );
 };

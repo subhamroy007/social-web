@@ -2,7 +2,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { globalColors } from "../utility/style/colors";
 import { globalLayouts } from "../utility/style/layout";
 import React, { useEffect } from "react";
-import { FlatList, Image, ListRenderItemInfo, StyleSheet } from "react-native";
+import { ListRenderItemInfo, StyleSheet } from "react-native";
 import StoryFeed from "../components/StoryFeed";
 import ImageFeedItemSeperatorComponent from "../components/ImageFeedItemSeperator";
 import { useAppDispatch, useAppSelector } from "../store/appStore";
@@ -15,6 +15,7 @@ import {
   getImageFeedThunk,
   ImageFeedRequest,
 } from "../store/imagePostSlice/imagePostReducer";
+import { FlatList } from "react-native-gesture-handler";
 
 const renderItem = (item: ListRenderItemInfo<string>) => {
   return <ImageFeedPost id={item.item} />;

@@ -41,11 +41,11 @@ export default CollapsibleText;
 const styles = StyleSheet.create({
   collapse: {
     width: "100%",
-    fontSize: 14,
+    fontSize: 12,
     paddingHorizontal: 10,
   },
   collapseToggler: {
     color: "gray",
-    fontSize: 16,
+    fontSize: 14,
   },
 });

@@ -15,50 +15,11 @@ const ImageFeedPostControls = () => {
         style={[styles.imageFeedPostControlsSubContainer]}
         edges={[]}
       >
-        <Icon onPress={() => {}}>
-          {(iconDefaultProps) => (
-            <CustomIcon
-              name="heart-outline"
-              size={24}
-              color="black"
-              style={{ marginLeft: 10 }}
-              {...iconDefaultProps}
-            />
-          )}
-        </Icon>
-        <Icon onPress={() => {}}>
-          {(iconDefaultProps) => (
-            <CustomIcon
-              name="comment-outline"
-              size={48}
-              color="black"
-              style={{ marginLeft: 24 }}
-              {...iconDefaultProps}
-            />
-          )}
-        </Icon>
-        <Icon onPress={() => {}}>
-          {(iconDefaultProps) => (
-            <CustomIcon
-              name="send"
-              size={24}
-              color="black"
-              style={{ marginLeft: 24 }}
-              {...iconDefaultProps}
-            />
-          )}
-        </Icon>
+        <Icon color="black" name="heart-outline" size={24} />
+        <Icon color="black" name="comment-outline" size={24} />
+        <Icon color="black" name="send" size={24} />
       </SafeAreaView>
-      <Icon onPress={() => {}}>
-        {(iconDefaultProps) => (
-          <CustomIcon
-            name="bookmark-outline"
-            size={24}
-            color="black"
-            {...iconDefaultProps}
-          />
-        )}
-      </Icon>
+      <Icon color="black" name="bookmark-outline" size={24} />
     </SafeAreaView>
   );
 };

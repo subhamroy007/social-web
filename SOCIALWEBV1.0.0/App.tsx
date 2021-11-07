@@ -1,3 +1,4 @@
+import "expo-dev-client";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import React, { useCallback, useEffect, useState } from "react";
@@ -10,16 +11,10 @@ import SearchResultScreen from "./screens/SearchResultScreen";
 import TrendingScreen from "./screens/TrendingScreen";
 import { MainTabNavigationParamList } from "./utility/types/navigation_types";
 import * as Font from "expo-font";
-import {
-  Feather,
-  AntDesign,
-  FontAwesome,
-  Ionicons,
-  EvilIcons,
-} from "@expo/vector-icons";
 import * as SplashScreen from "expo-splash-screen";
 import { Provider } from "react-redux";
 import appStore from "./store/appStore";
+import AdvancedShutter from "./components/AdvancedShutter";
 
 enableScreens(true);
 
@@ -90,7 +85,7 @@ const App = () => {
     <Provider store={appStore}>
       <NavigationContainer onReady={appReadyCallback}>
         <MainTabNavigation.Navigator
-          tabBar={(props) => <ShutterComponent {...props} />}
+          tabBar={(props) => <AdvancedShutter {...props} />}
         >
           <MainTabNavigation.Screen
             name="ImageFeed"

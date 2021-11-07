@@ -1,15 +1,8 @@
-import React, { useCallback, useState } from "react";
-import {
-  Image,
-  ImageSourcePropType,
-  StyleProp,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  ViewProps,
-  ViewStyle,
-} from "react-native";
+import React, { useMemo } from "react";
+import { StyleProp, StyleSheet, ViewStyle } from "react-native";
+import FastImage, { ImageStyle, Source } from "react-native-fast-image";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { globalColors } from "../utility/style/colors";
+import { AVATAR_PHOTO_TO_GAP_RATIO } from "../utility/constants/appConstants";
 
 export interface AvatarProps {
   size: number;
@@ -17,66 +10,40 @@ export interface AvatarProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const Avatar = (props: AvatarProps) => {
-  const [hasUnseenStroy, setUnseenStroy] = useState<boolean>(true);
+const Avatar = ({ size, url, style }: AvatarProps) => {
+  const avatarSource: Source = useMemo(
+    () => ({
+      uri: url,
+      cache: "immutable",
+      priority: "high",
+    }),
+    [url]
+  );
 
-  const avatarPressHandler = useCallback(() => {
-    setUnseenStroy((state) => !state);
-  }, [setUnseenStroy]);
+  const avatarDynamicStyle: ImageStyle = useMemo(
+    () => ({ width: size, height: size, borderRadius: size * 0.5 }),
+    [size]
+  );
 
-  const imageSource: ImageSourcePropType = {
-    uri: props.url,
-    height: props.size,
-    width: props.size,
-    cache: "default",
-    scale: 1.0,
-    method: "GET",
-  };
+  const avatarContainerDynamicStyle: StyleProp<ViewStyle> = useMemo(
+    () => ({
+      padding: AVATAR_PHOTO_TO_GAP_RATIO * size,
+      borderWidth: AVATAR_PHOTO_TO_GAP_RATIO * size,
+      borderColor: "blue",
+      borderRadius: (1 + 4 * AVATAR_PHOTO_TO_GAP_RATIO) * size * 0.5,
+    }),
+    [size]
+  );
 
   return (
-    <TouchableWithoutFeedback onPress={avatarPressHandler}>
-      <SafeAreaView
-        edges={[]}
-        style={[
-          globalColors.avatarContainerColor,
-          {
-            width: props.size,
-            height: props.size,
-            backgroundColor: hasUnseenStroy ? "#205EFF" : "#FDFDFD",
-            borderRadius: Math.floor(props.size / 2),
-          },
-          styles.avatarContainer,
-          props.style,
-        ]}
-      >
-        <Image
-          source={imageSource}
-          resizeMethod="resize"
-          resizeMode="cover"
-          style={[
-            globalColors.avatarColor,
-            {
-              width: props.size - 6,
-              height: props.size - 6,
-              borderRadius: Math.floor(props.size / 2 - 3),
-            },
-          ]}
-        />
-      </SafeAreaView>
-    </TouchableWithoutFeedback>
+    <SafeAreaView edges={[]} style={[avatarContainerDynamicStyle, style]}>
+      <FastImage
+        source={avatarSource}
+        resizeMode="cover"
+        style={[avatarDynamicStyle]}
+      />
+    </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  avatarContainer: {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "nowrap",
-    alignItems: "center",
-    alignContent: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-  },
-});
 
 export default Avatar;

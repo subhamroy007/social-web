@@ -7,8 +7,8 @@ import { StyleSheet } from "react-native";
 import CollapsibleText from "./CollapsibleText";
 
 const ImageFeedPost = (props: { id: string }) => {
-  const height = Math.floor(Math.random() * 400) + 200;
-  const width = Math.floor(Math.random() * 400) + 200;
+  const height = Math.floor(Math.random() * 400) + 100;
+  const width = Math.floor(Math.random() * 400) + 100;
 
   return (
     <SafeAreaView
@@ -18,8 +18,8 @@ const ImageFeedPost = (props: { id: string }) => {
       <ImageFeedPostHeader />
       <ImageFeedSinglePost
         url={`https://source.unsplash.com/random/${width}x${height}`}
-        height={height}
         width={width}
+        height={height}
       />
       <ImageFeedPostControls />
       <CollapsibleText
