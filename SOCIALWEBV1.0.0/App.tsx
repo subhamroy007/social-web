@@ -15,6 +15,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { Provider } from "react-redux";
 import appStore from "./store/appStore";
 import AdvancedShutter from "./components/AdvancedShutter";
+import ProfileScreenNavigation from "./navigations/ProfileScreenNavigation";
 
 enableScreens(true);
 
@@ -85,7 +86,9 @@ const App = () => {
     <Provider store={appStore}>
       <NavigationContainer onReady={appReadyCallback}>
         <MainTabNavigation.Navigator
+          initialRouteName="Profile"
           tabBar={(props) => <AdvancedShutter {...props} />}
+          backBehavior="history"
         >
           <MainTabNavigation.Screen
             name="ImageFeed"
@@ -95,7 +98,11 @@ const App = () => {
             name="SearchResult"
             component={SearchResultScreen}
           />
-          <MainTabNavigation.Screen name="Profile" component={ProfileScreen} />
+          <MainTabNavigation.Screen
+            name="Profile"
+            component={ProfileScreen}
+            options={{ headerShown: false }}
+          />
           <MainTabNavigation.Screen
             name="Trending"
             component={TrendingScreen}

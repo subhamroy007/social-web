@@ -1,4 +1,4 @@
-#Sun Nov 07 21:38:16 IST 2021
+#Mon Nov 08 23:53:42 IST 2021
 path.4=classes_1.dex
 path.3=classes_0.dex
 path.2=classes2.dex
@@ -19,6 +19,7 @@ base.8=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0
 base.7=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0.0\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_12.dex
 base.6=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0.0\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_11.dex
 base.5=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0.0\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_10.dex
+renamed.29=classes30.dex
 renamed.28=classes29.dex
 renamed.27=classes28.dex
 renamed.26=classes27.dex
@@ -32,6 +33,7 @@ renamed.20=classes21.dex
 base.27=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0.0\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_8.dex
 base.26=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0.0\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_7.dex
 base.25=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0.0\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_6.dex
+base.29=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0.0\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_26.dex
 renamed.18=classes19.dex
 renamed.17=classes18.dex
 renamed.9=classes10.dex
@@ -73,6 +75,7 @@ path.14=classes_19.dex
 renamed.4=classes5.dex
 path.15=classes_2.dex
 renamed.19=classes20.dex
+path.29=classes_26.dex
 base.13=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0.0\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_18.dex
 base.12=C\:\\Users\\subha\\OneDrive\\Desktop\\projects\\social-web\\SOCIALWEBV1.0.0\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_17.dex
 path.20=classes_24.dex

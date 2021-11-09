@@ -2,44 +2,42 @@ import React, { useCallback } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { ResourceContainnerProps } from "../utility/types/other_types";
+import { MediumText } from "../utility/ui/appText";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Icon from "./Icon";
 
-const ResourceContainer = ({
+const HighlightedLink = ({
   iconName,
   title,
   url,
+  style,
 }: ResourceContainnerProps) => {
+  const pressHandler = useCallback(() => {}, []);
+
   return (
-    <Pressable style={styles.touchable} onPress={useCallback(() => {}, [])}>
-      <View style={styles.container}>
-        <MaterialIcons
-          style={styles.icon}
-          name="email"
-          size={20}
-          color="black"
-        />
-        <Text style={styles.text}>{title}</Text>
-      </View>
+    <Pressable onPress={pressHandler}>
+      <SafeAreaView style={[styles.container, style]} edges={[]}>
+        <Icon name={iconName} color="black" size={16} />
+        <MediumText style={styles.titleText}>{title}</MediumText>
+      </SafeAreaView>
     </Pressable>
   );
 };
 
-export default ResourceContainer;
+export default HighlightedLink;
 
 const styles = StyleSheet.create({
-  touchable: {
-    backgroundColor: "#EBE8FB",
-    borderRadius: 30,
-  },
   container: {
     flexDirection: "row",
-    justifyContent: "center",
-    margin: 5,
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    flexWrap: "nowrap",
+    backgroundColor: "#EBE8FB",
+    borderRadius: 12,
+    padding: 4,
   },
-  icon: {
+  titleText: {
     marginHorizontal: 4,
-  },
-  text: {
-    marginHorizontal: 4,
-    fontWeight: "bold",
+    fontSize: 12,
   },
 });

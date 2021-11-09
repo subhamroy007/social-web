@@ -1,4 +1,9 @@
-import { Animated, PanResponderInstance } from "react-native";
+import {
+  Animated,
+  PanResponderInstance,
+  StyleProp,
+  ViewStyle,
+} from "react-native";
 
 export interface GenericTabBarIconProps {
   children: React.ReactNode;
@@ -13,15 +18,23 @@ export interface NavigationShutterHook {
 }
 
 export interface CollapseTextProps {
-    content: string;
+  content: string;
 }
 
 export interface TextScrollProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export interface ResourceContainnerProps {
-    iconName: string;
-    title: string;
-    url: string;
+  iconName: string;
+  title: string;
+  url: string;
+  style?: StyleProp<ViewStyle>;
+}
+
+//a utility interface represent the name value component props
+export interface NameValuePairProps {
+  name: string;
+  value: string;
+  style?: StyleProp<ViewStyle>;
 }

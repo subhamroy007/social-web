@@ -27,10 +27,14 @@ const Avatar = ({ size, url, style }: AvatarProps) => {
 
   const avatarContainerDynamicStyle: StyleProp<ViewStyle> = useMemo(
     () => ({
-      padding: AVATAR_PHOTO_TO_GAP_RATIO * size,
-      borderWidth: AVATAR_PHOTO_TO_GAP_RATIO * size,
+      padding: size * AVATAR_PHOTO_TO_GAP_RATIO,
+      borderWidth: size * AVATAR_PHOTO_TO_GAP_RATIO,
       borderColor: "blue",
       borderRadius: (1 + 4 * AVATAR_PHOTO_TO_GAP_RATIO) * size * 0.5,
+      height: (1 + 4 * AVATAR_PHOTO_TO_GAP_RATIO) * size,
+      width: (1 + 4 * AVATAR_PHOTO_TO_GAP_RATIO) * size,
+      alignItems: "center",
+      justifyContent: "center",
     }),
     [size]
   );

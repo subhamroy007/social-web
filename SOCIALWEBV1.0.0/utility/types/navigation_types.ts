@@ -5,3 +5,9 @@ export type MainTabNavigationParamList = {
   Trending: undefined;
   Notification: undefined;
 };
+
+export type ProfileContentNavigationParamList = {
+  ImageGallery: undefined;
+  VideoCollection: undefined;
+  StoryBook: undefined;
+};
